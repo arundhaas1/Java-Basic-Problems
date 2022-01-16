@@ -1,0 +1,56 @@
+//                    FIBONACCI SERIES method-1 (without using recrusion)
+
+package com.learning;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int n1=0; 
+        int n2=1;
+        int n3;
+        int count=10;
+        System.out.println(n1);
+        System.out.println(n2);
+
+        for (int i=2;i<10;i++){
+            n3=n1+n2;
+            System.out.println(n3);
+
+            n1=n2;
+            n2=n3;
+
+
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________
+
+//                    FIBONACCI SERIES method-2 (with using recrusion)
+
+package com.dhas;
+
+public class Main {
+    static int n1=0,n2=1,n3=0; //must use the term static for the recrusion method,and also it should be declared outside the methods
+
+    public static void main(String[] args) {
+        int count = 10;
+        System.out.println(n1);
+        System.out.println(n2);
+        printFibonacii(count - 2);
+    }
+
+    public static void printFibonacii (int count) {
+        if (count > 0) {
+            n3 = n1 + n2;
+            System.out.println(n3);
+            n1 = n2;
+            n2 = n3;
+
+            printFibonacii(count-1);
+
+        }
+    }
+}
+
+____________________________________________________________________________________________________________________________________________________________________________
