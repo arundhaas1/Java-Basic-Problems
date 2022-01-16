@@ -18,16 +18,16 @@ public class Main {
     public static void armStrong(int number){
 		int digits=0,lastDigit;
 		double sum=0;
-		int temp=number;
+		int temp=number;   //temporary storing
 
 		while (temp>0){
 			temp/=10;
 			digits++;
 		}
-		temp=number;
+		temp=number;    //because the value of temp changes in the above loop,so it must be insilalized  again
 		while (temp>0){
 			lastDigit=temp%10;
-			sum+=Math.pow(lastDigit,digits);
+			sum+=Math.pow(lastDigit,digits);  //.pow(number,power)
 			temp=temp/10;
 		}
 		System.out.println(sum);
