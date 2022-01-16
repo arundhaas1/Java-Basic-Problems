@@ -1,0 +1,60 @@
+        //RANDOM NUMBER METHOD 1 (USING MATH.RANDOM())
+        
+package com.dhas;    
+public class Main {
+    public static void main(String[] args) {
+		System.out.println(Math.random());
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+        //RANDOM NUMBER METHOD 2 (USING MATH.RANDOM()*(MAX-MIN+1)+MIN)
+        
+package com.dhas;    //for random values between two numbers
+public class Main {
+    public static void main(String[] args) {
+        int min=200;
+        int max=400;
+        double a=Math.random()*(max-min+1)+min;
+		System.out.println(a);
+    }
+}
+
+___________________________________________________________________________________________________________________________________________________________________________________
+
+        //RANDOM NUMBER METHOD 3 (USING RANDOM CLASS)
+
+package com.dhas;
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int a= random.nextInt(100);    //100 is used to get values in between 0 to 100
+        System.out.println(a);
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+        //RANDOM NUMBER METHOD 3 (THREAD LOCAL RANDOM)
+        
+package com.dhas;
+import java.util.concurrent.ThreadLocalRandom;
+public class Main {
+    public static void main(String[] args) {
+        int a= ThreadLocalRandom.current().nextInt(100);
+        System.out.println(a);
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________________
+        
+        
+        
+        
+        
+        
+        
+        
+        
