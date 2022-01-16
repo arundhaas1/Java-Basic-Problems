@@ -1,0 +1,73 @@
+          //PALINDROME METHOD 1 (FOR NUMBERS)
+
+A palindrome number is a number that is same after reverse. For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.
+
+package com.dhas;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("enter the first number");  //Getting number
+		int number = input.nextInt();
+		int reverse=0;
+		int temp;
+		temp=number; //temp is just to store the number without changing it 
+
+		while(number>0){
+			int r=number%10;
+			reverse=(reverse*10) +r;
+			number/=10;
+		}
+
+		if (reverse==temp){
+			System.out.println(temp + " is a palindrome");
+		}else {
+			System.out.println(temp+ " is  not a palindrome");
+		}
+
+		}
+}
+_______________________________________________________________________________________________________________________________________________________________________________
+          //PALINDROME METHOD 2 (FOR STRINGS)
+          
+ package com.dhas;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("enter the string");  //Getting number
+		String name = input.nextLine();
+		String reverse="";
+
+		int length= name.length();
+		for (int i=length-1;i>=0;i--){
+			reverse=reverse+name.charAt(i);  // charAt() is used to get letter as specific index in strings
+		}
+		if (reverse.equals(name)){
+			System.out.println(name + " is a palindrome");
+		}else {
+			System.out.println(name + " is not a palindrome");
+		}
+    }
+}
+
+______________________________________________________________________________________________________________________________________________________________________________
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
