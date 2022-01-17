@@ -46,4 +46,88 @@ public class Main {
     
   _____________________________________________________________________________________________________________________________________________________________________________
   
-  
+              //Using new instance() of class method
+
+package com.dhas;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+            Class c=Class.forName("com.dhas.Simple");  //com.dhas is package name and simple is the class name.
+            Simple s=(Simple)c.newInstance();
+            s.message();
+    }
+}
+//creating new class
+class Simple{
+    void message(){System.out.println("Hello Java");}
+}
+______________________________________________________________________________________________________________________________________________________________________________
+
+            //using the new instance method of constructor class
+            
+package com.dhas;
+import java.lang.reflect.Constructor;      //auto import 
+import java.lang.reflect.InvocationTargetException;   //auto import 
+class Learn{
+    private String str;
+    public void setName(String str){
+        this.str = str;
+    }
+    public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
+            Constructor<Learn> constructor = Learn.class.getDeclaredConstructor();
+            Learn r = constructor.newInstance();
+            r.setName("JavaTpoint");
+            System.out.println(r.str);
+        
+    }
+}
+
+______________________________________________________________________________________________________________________________________________________________________________
+          //Using Deserialization and Serialization 
+          
+          //Serialization in Java allows us to convert an Object to stream that we can send over the network or save it as file or store in DB for later usage.
+          //the reverse process is Deserialization 
+
+package com.dhas;
+import java.io.*;
+public  class Main{
+    public static void main(String args[]) throws Exception {
+        Save obj=new Save();  //create object using new keyword
+        obj.i=12;     //assign value
+
+        File f=new File("obj.txt");   //obj.txt is the place where the data is siored in computer
+        ObjectOutputStream oos=new ObjectOutputStream(fos);   //All three lines are predefined codes of Serialization 
+        oos.writeObject(obj);
+
+        FileInputStream fis=new FileInputStream(f);
+        ObjectInputStream ois=new ObjectInputStream(fis);     //All two lines are predefined codes of Deserialization 
+        Save obj1=(Save) ois.readObject();   //Save is the name of the class
+        System.out.println(obj1.i);  //to print the num in i variable of the save class
+    }
+}
+
+class Save implements Serializable{  
+    int i;
+}
+           
+            
+________________________________________________________________________________________________________________________________________________________________________________     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
