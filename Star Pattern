@@ -1,0 +1,214 @@
+                      //RIGHT ANGLE TRIANGLE
+                      
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();  //for new line
+        }
+    }
+}
+
+// *
+// **
+// ***
+// ****
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+                      //LEFT ANGLE TRIANGLE
+                      
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int row=6;
+        for(int i=0;i<row;i++){
+            for (int j=(row-i); j>=0; j--)  //for spaces
+            {
+                System.out.print(" ");
+            }
+            for (int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________
+
+              //PYRAMID
+              
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int row=6;
+        for(int i=0;i<row;i++){
+            for (int j=(row-i); j>=0; j--)
+            {
+                System.out.print(" ");
+            }
+            for (int j=0;j<=i;j++){
+                System.out.print("*");
+                System.out.print(" ");   //only this xtra line from the light angled triangle
+            }
+            System.out.println();
+        }
+    }
+} 
+   
+________________________________________________________________________________________________________________________________________________________________________
+
+              //Diamond
+              
+package com.dhas;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[])
+    {
+        int row, i, j, space = 1;
+        System.out.print("Enter the number of rows you want to print: ");
+        Scanner sc = new Scanner(System.in);  //get input no. of rows
+        row = sc.nextInt();
+        space = row - 1;  //for spaces
+        for (i = 1; i<= row; i++)
+        {
+            for (j = 1; j<= space; j++)
+            {
+                System.out.print(" ");
+            }
+            space--;              //this is for reduce the spaces in the next row
+            for (j = 1; j <= 2 * i - 1; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        space = 1;
+        for (i = 1; i<= row - 1; i++)
+        {
+            for (j = 1; j<= space; j++)
+            {
+                System.out.print(" ");
+            }
+            space++;
+            for (j = 1; j<= 2 * (row - i) - 1; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________
+              
+                //DOWNWARD TRIANGLE
+              
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int row=6;
+        for(int i=row;i>0;i--){
+            for (int j=0;j<=i;j++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________-
+
+              //REVERSE PYRAMID
+
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int row=6;
+        int space=row-1;
+        for(int i=row;i>=0;i--){
+            for (int j=0;j<space;j++){
+                System.out.print(" ");
+            }
+            space++;
+            for (int j=0;j<=i-1;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________
+
+          //RIGHT PASCALS TRIANGLE
+          
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int i,j;
+        int row=6;
+        for (i=0;i<row;i++){
+            for (j=0;j<=i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        //same as above with opposite limits
+        for (i=row;i>=0;i--){
+            for (j=0;j<=i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________
+
+          //LEFT PASCALS TRIANGLE
+
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        int i,j;
+        int row=6;
+        for (i=0;i<=row;i++){
+            for (j=row-i;j>=0;j--){
+                System.out.print(" ");
+            }
+            for (j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //same as above with different limits
+        for (i=row;i>0;i--){
+            for (j=row-i;j>=0;j--){
+                System.out.print(" ");
+            }
+            for (j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+_______________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
