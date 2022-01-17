@@ -1,0 +1,31 @@
+            // .equals() method
+            
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        Integer x=new Integer(13);
+        Double y=new Double(12.22);
+        System.out.println(x.equals(y));  //false
+        System.out.println(y.equals(12.22));  //true
+    }
+}
+________________________________________________________________________________________________________________________________________________________________________________
+              //hashcode() method
+              
+//A hash code is an integer value that is associated with each object in Java
+
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        Integer x=new Integer(1);
+        Double y=new Double(1);
+         int a=x.hashCode();
+         int b=y.hashCode();
+
+        System.out.println("hashcode of x is "+a );
+        System.out.println("hashcode of y is "+b );
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________________
+
