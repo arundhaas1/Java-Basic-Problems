@@ -1,0 +1,49 @@
+          //Using new keyword
+          
+package com.dhas;
+public class Main {
+    public static void main(String[] args) {
+        ClassName object=new ClassName();  //intializing
+        object.methodName();  //calling
+    }
+}
+//create new class
+    class ClassName{
+    public static void methodName(){
+        System.out.println("Welcome");
+    }
+}
+________________________________________________________________________________________________________________________________________________________________________________
+
+          //Using clone() method
+          
+package com.dhas;
+public class Main {
+    public static void main(String[] args) throws CloneNotSupportedException {  //add throe clone method
+        Students object1=new Students();
+        Students object2=(Students)object1.clone();   //add (Students)object1.clone() to make the object to store the value as an object
+        object2.number=10;
+        System.out.println(object2.number);
+    }
+}
+//create class
+    class Students implements Cloneable{  //use implements Cloneable to allow access
+        int number;
+
+        public Students(int number) {
+            this.number = number;    //add Constructor
+        }
+
+        public Students() {
+
+        }
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {  //override the object clone method
+            return super.clone();
+        }
+    }
+    
+  _____________________________________________________________________________________________________________________________________________________________________________
+  
+  
