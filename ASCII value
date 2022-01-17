@@ -1,1 +1,26 @@
+        //Print ASCII Value
+        
+        //The numerical value, or order, of an ASCII character. There are 128 standard ASCII characters, numbered from 0 to 127.
+        
+package com.dhas;
+public  class Main{
+    public static void main(String args[]) throws Exception {
+       char ch1='a';   //assign value 
+       int asciivalue=ch1;   //store the value in variable with int data type to get ASCII value
+        System.out.println("the ASCII value of  "+ch1+" is "+asciivalue);
+    }
+}
+____________________________________________________________________________________________________________________________________________________________________
 
+      //Using Type Casting
+      
+package com.dhas;
+public  class Main{
+    public static void main(String args[]) throws Exception {
+       char ch1='a';
+       int asciivalue=(int)ch1;  //same as above but casting the data type going to be stored
+        System.out.println("the ASCII value of  "+ch1+" is "+asciivalue);
+    }
+}
+
+____________________________________________________________________________________________________________________________________________________________________________
